@@ -344,6 +344,29 @@ header a {
   top: 40%;
   padding-left: 4%; }
 
+.imagebox_wrapper {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  background: green; }
+
+.imagebox {
+  display: block;
+  float: left;
+  width: 23%;
+  height: auto;
+  max-height: 200px;
+  overflow: hidden;
+  background: red;
+  background: blue;
+  margin: 1%;
+  padding: 0; }
+
+.imagebox img {
+  width: 100%;
+  height: auto;
+  position: relative; }
+
 footer {
   height: auto;
   overflow: hidden;
