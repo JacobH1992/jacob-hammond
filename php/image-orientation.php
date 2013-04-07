@@ -3,23 +3,17 @@
 
 function getOrientation($imageSrc) {
 
+    list($width, $height) = getimagesize("$imageSrc");  // get image size
 
-    // get the width of image
-    $width = $imageSrc->imagesx;
-    $height = $imageSrc->imagesy;
-
-    // the class we're adding
-    $landscape_class = 'landscape';
-  	$portrait_class = 'portrait';
-
-    // if image is landscape or portrait add class name accordingly 
-    if( $imageSrc->$width > $imageSrc->$height) {
-        return $landscape_class;
+    if( $width > $height ) {   
+        return 'landscape';
+    }
+    else if( $width < $height ) {
+        return 'portrait';
     }
     else {
-        return $portrait_class;
-    }
-    
+        return 'square';
+    }  
 }
 
 ?>

@@ -73,6 +73,10 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 
 <div id="content-wrapper">
 
+    <div class="top-msg">
+        <h2>THE WORK OF<br/><span>JACOB HAMMOND?</span><br /></h2>
+    </div>
+
 <div class="imagebox_wrapper">
         <?php
 	    	include 'php/image-orientation.php';
