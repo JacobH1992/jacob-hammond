@@ -25,6 +25,9 @@
 
 article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
   display: block;
+
+<script type="text/javascript" src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+
 }
 </style>
 <![endif]-->
@@ -95,7 +98,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
                     $image = $item->children('media', true)->content->attributes()->url;
  	                  $orientation = getOrientation($image);
 	            ?>
-            <div class="imagebox"><a href="<?= $image; ?>"><img src="images/preloader.png" data-original="<?= $thumb; ?>" class="<?= $orientation ?> lazy" alt="<?= $title; ?>"/></a></div>
+            <div class="imagebox"><a href="<?= $image; ?>"><img src="images/preloader.png" data-original="<?= $thumb; ?>" class="<?= $orientation ?> lazy fresco" alt="<?= $title; ?>"/></a></div>
             <?php endforeach;
         ?>
 	    </div>    
@@ -109,11 +112,11 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 </div>
 </body>
 
+
+
 <script src="js/jquery-1.9.1.min.js" charset="utf-8"></script>
 <script src="js/modernizr.custom.js" charset="utf-8"></script>
-
 <script src="js/jqeury-functions.js" charset="utf-8"></script>
-
 <script src="js/jquery.lazyload.js" charset="utf-8"></script>
 <script type="text/javascript" charset="utf-8">
     $(function() {          
@@ -123,10 +126,12 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
         });
   	});
    
- </script>
+</script>
+
+<!-- Force HD quality on YouTube videos) -->
+<script type="text/javascript" src="http://www.youtube.com/iframe_api"></script>
 
 <!-- GOOGLE ANALYTICS -->
-
 <script type="text/javascript">
 
   var _gaq = _gaq || [];
