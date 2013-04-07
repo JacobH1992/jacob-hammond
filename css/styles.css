@@ -345,7 +345,7 @@ header a {
   padding-left: 4%; }
 
 .imagebox-wrapper {
-  width: 100%;
+  width: 102%;
   overflow: auto;
   -moz-transition: all 0.5s;
   /* Firefox 4 */
@@ -354,7 +354,7 @@ header a {
   -o-transition: all 0.5s;
   /* Opera */
   transition: all 0.5s;
-  background: green; }
+  background: red; }
 
 .imagebox-position {
   width: 100%;
