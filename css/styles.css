@@ -77,13 +77,13 @@ header a {
   height: 100px;
   background: #666;
   color: #FFF;
-  transition: all 0.5s;
   -moz-transition: all 0.5s;
   /* Firefox 4 */
   -webkit-transition: all 0.5s;
   /* Safari and Chrome */
   -o-transition: all 0.5s;
-  /* Opera */ }
+  /* Opera */
+  transition: all 0.5s; }
 
 #logo:hover {
   color: #000;
@@ -114,13 +114,13 @@ header a {
   background: #666;
   color: #FFF;
   font-weight: 600;
-  transition: all 0.5s;
   -moz-transition: all 0.5s;
   /* Firefox 4 */
   -webkit-transition: all 0.5s;
   /* Safari and Chrome */
   -o-transition: all 0.5s;
-  /* Opera */ }
+  /* Opera */
+  transition: all 0.5s; }
 
 #nav li:hover {
   color: #000;
@@ -181,13 +181,13 @@ header a {
   height: 400px;
   overflow: hidden;
   background: #666;
-  transition: all 0.5s;
   -moz-transition: all 0.5s;
   /* Firefox 4 */
   -webkit-transition: all 0.5s;
   /* Safari and Chrome */
   -o-transition: all 0.5s;
   /* Opera */
+  transition: all 0.5s;
   z-index: 10; }
 
 .content-box h3 {
@@ -258,13 +258,13 @@ header a {
   height: 300px;
   font-weight: 100;
   color: #999;
-  transition: all 0.5s;
   -moz-transition: all 0.5s;
   /* Firefox 4 */
   -webkit-transition: all 0.5s;
   /* Safari and Chrome */
   -o-transition: all 0.5s;
-  /* Opera */ }
+  /* Opera */
+  transition: all 0.5s; }
 
 /*#about-wrap
 {
@@ -285,13 +285,13 @@ header a {
   padding: 0% 3% 0% 0%;
   position: relative;
   top: -10%;
-  transition: all 0.5s;
   -moz-transition: all 0.5s;
   /* Firefox 4 */
   -webkit-transition: all 0.5s;
   /* Safari and Chrome */
   -o-transition: all 0.5s;
-  /* Opera */ }
+  /* Opera */
+  transition: all 0.5s; }
 
 .me-pic img {
   height: auto;
@@ -304,13 +304,13 @@ header a {
   overflow: hidden;
   padding: 75px 0% 0% 5%;
   z-index: 100;
-  transition: all 0.5s;
   -moz-transition: all 0.5s;
   /* Firefox 4 */
   -webkit-transition: all 0.5s;
   /* Safari and Chrome */
   -o-transition: all 0.5s;
-  /* Opera */ }
+  /* Opera */
+  transition: all 0.5s; }
 
 .about-msg p, .about-msg h3, .about-msg a, .map h3 {
   color: #333;
@@ -347,25 +347,48 @@ header a {
 .imagebox_wrapper {
   width: 100%;
   height: auto;
-  overflow: hidden;
-  background: green; }
+  overflow: hidden; }
 
 .imagebox {
   display: block;
   float: left;
-  width: 23%;
+  width: 10.5%;
+  padding-bottom: 10.5%;
   height: auto;
   max-height: 200px;
   overflow: hidden;
-  background: red;
-  background: blue;
   margin: 1%;
   padding: 0; }
 
+.imagebox:hover img {
+  opacity: 0.8;
+  filter: alpha(opacity=80);
+  transform: scale(0.9, 0.9);
+  -webkit-transform: scale(0.9, 0.9);
+  -moz-transform: scale(0.9, 0.9);
+  -o-transform: scale(0.9, 0.9);
+  -ms-transform: scale(0.9, 0.9);
+  cursor: pointer; }
+
 .imagebox img {
-  width: 100%;
+  width: auto;
   height: auto;
-  position: relative; }
+  position: relative;
+  top: 0;
+  left: 0;
+  -moz-transition: all 0.5s;
+  /* Firefox 4 */
+  -webkit-transition: all 0.5s;
+  /* Safari and Chrome */
+  -o-transition: all 0.5s;
+  /* Opera */
+  transition: all 0.5s;
+  -webkit-border-top-left-radius: 5px;
+  -webkit-border-top-right-radius: 5px;
+  -moz-border-radius-topleft: 5px;
+  -moz-border-radius-topright: 5px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px; }
 
 footer {
   height: auto;
@@ -424,7 +447,17 @@ footer p {
     font-size: 1.2em; }
 
   .about-msg {
-    padding: 0% 5% 0% 5%; } }
+    padding: 0% 5% 0% 5%; }
+
+  .imagebox {
+    display: block;
+    float: left;
+    width: 48%;
+    height: auto;
+    max-height: 200px;
+    overflow: hidden;
+    margin: 1%;
+    padding: 0; } }
 @media (max-width: 1024px) {
   h2 {
     font-size: 1.3em; }

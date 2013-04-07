@@ -77,8 +77,8 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 
 <div class="imagebox_wrapper">
         <?php
-//            include 'includes/getOrientation.php';
-
+	    	include 'php/image-orientation.php';
+            
             $webDesign = simplexml_load_file('http://backend.deviantart.com/rss.xml?q=gallery:ChubbaART/43022466');
             $channel = $webDesign->channel;
 
@@ -88,9 +88,9 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
                     $date  = $item->pubDate;
                     $thumb = $item->children('media', true)->thumbnail->{1}->attributes()->url;
                     $image = $item->children('media', true)->content->attributes()->url;
- //                   $orientation = getOrientation("$image");
+ 	                $orientation = getOrientation("$image");
 	            ?>
-            <div class="imagebox"><a href="<?= $image; ?>"><img src="<?= $thumb; ?>" class="<?= $orientation; ?> lazy" alt="<?= $title; ?>"/></a></div>
+            <div class="imagebox"><a href="<?= $image; ?>"><img src="images/preloader.png" data-original="<?= $thumb; ?>" class="<?= $orientation ?> lazy" alt="<?= $title; ?>"/></a></div>
             <?php endforeach;
         ?>
 	</div>
