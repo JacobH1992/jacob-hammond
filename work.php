@@ -77,9 +77,10 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
         <h2>THE WORK OF<br/><span>JACOB HAMMOND</span><br /></h2>
     </div>
 
-<div class="imagebox_wrapper" id="green">
+    <div class="imagebox-wrapper">
 
-        <h3>WEBSITE DESIGN</h3>
+      <div class="imagebox-position">
+
         <?php
 	    	include 'php/image-orientation.php';
             
@@ -97,16 +98,12 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
             <div class="imagebox"><a href="<?= $image; ?>"><img src="images/preloader.png" data-original="<?= $thumb; ?>" class="<?= $orientation ?> lazy" alt="<?= $title; ?>"/></a></div>
             <?php endforeach;
         ?>
-	</div>
-
-</div>
-
+	    </div>    
+    
+    </div>
 
 <div class="clear"></div>
 	
-<!--
-<div class="designer">Hello</div>
--->
 </div>
 
 </div>

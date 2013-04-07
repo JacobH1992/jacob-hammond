@@ -344,62 +344,8 @@ header a {
   top: 40%;
   padding-left: 4%; }
 
-/*.imagebox_wrapper
-{
-	width: 100%;
-	height: auto;
-	overflow: hidden;
-}
-
-.imagebox
-{
-	float: left;
-	width: 12.5%;
-	height: auto;
-	max-height: 150px;
-	overflow: hidden;
-	padding: 0;
-	@include border-radius-full;
-}
-
-	.imagebox:hover .imagehover
-	{
-		opacity: 0.8;
-		filter: alpha(opacity = 80);
-		@include hover-shrink-less;
-		cursor: pointer;
-	}
-
-
-	.imagebox img
-	{
-		float: left;
-
-		width: 100%;
-		height: auto;
-		overflow: hidden;
-
-		@include hover-fade-normal;
-	}
-
-.landscape
-{
-	height:100%;
-}
-
-.portrait
-{
-	width: 100%;
-}
-
-.square
-{
-	width: 100%;
-	height: auto;
-}*/
-.imagebox_wrapper {
+.imagebox-wrapper {
   width: 100%;
-  margin-bottom: 10px;
   overflow: auto;
   -moz-transition: all 0.5s;
   /* Firefox 4 */
@@ -407,12 +353,18 @@ header a {
   /* Safari and Chrome */
   -o-transition: all 0.5s;
   /* Opera */
-  transition: all 0.5s; }
+  transition: all 0.5s;
+  background: green; }
+
+.imagebox-position {
+  width: 100%;
+  margin-left: -1%; }
 
 .imagebox {
-  width: 14.666%;
-  padding-bottom: 14.666%;
-  margin: 0% 0 1% 1%;
+  width: 15.666%;
+  padding-bottom: 15.666%;
+  margin: 0 0 1% 1%;
+  background: red;
   float: left;
   position: relative;
   overflow: hidden;
@@ -422,7 +374,13 @@ header a {
   /* Safari and Chrome */
   -o-transition: all 0.5s;
   /* Opera */
-  transition: all 0.5s; }
+  transition: all 0.5s;
+  -webkit-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  border-radius: 5px; }
 
 .imagebox:hover {
   transform: scale(0.75, 0.75);
