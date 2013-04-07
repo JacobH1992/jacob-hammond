@@ -11,7 +11,9 @@
 
 
 <link rel="stylesheet" href="css/styles.css" type="text/css" media="screen" />
+
 <link rel="stylesheet" href="css/normalize.css" type="text/css" media="screen" />
+
 
 <link rel="shortcut icon" href="images/favicon.ico">
 <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,400,600,700' rel='stylesheet' type='text/css'>
@@ -47,92 +49,63 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 
 <div id="main-wrapper">
 
+<header>
 
-	<header>
-
-		<a href="index.html">
-			<div id="logo">
-				<h1>JH</h1>
-			</div>
-		</a>
-		
-		<div id="nav">
-			<ul>
-				<a href="work.php"><li>WORK</li></a>
-				<a href="about.html"><li>ABOUT</li></a>
-				<li>CONTACT</li>
-			</ul>
-		</div>	
-
-	</header>	
-
-	<div class="clear"></div>
-
-	<div id="content-wrapper">
-
-		<div class="top-msg">
-				<h2>WHO IS<br/><span>JACOB HAMMOND?</span><br /></h2>
+	<a href="index.html">
+		<div id="logo">
+			<h1>JH</h1>
 		</div>
+	</a>
+	
+	<div id="nav">
+		<ul>
+			<li>WORK</li>
+			<li>ABOUT</li>
+			<li>CONTACT</li>
+		</ul>
+	</div>	
 
-			<div class="me-pic">
-					<img src="images/preloader.png" class="lazy" data-original="images/me-pic.png" alt="Jacob Hammond (Me)">
-					<noscript><img src="images/me-pic.png"></noscript>
-			</div>
-
-
-				<div class="about-msg">
-
-					<h3>Hey, I'm Jacob. I love food, socialising, digital art, music, have a passion for design and people <strong>call me Jake.</strong></h3>
-					<p>I started designing when I was 11 and haven't looked back since. Even my love for gaming had to take 2nd place.</p>
-					<p>Now I am in the 3rd year of my degree and working for The Walt Disney Company in London.</p>
-
-				<!--<div class="arrow"></div>-->
-
-				</div>
+</header>	
 
 
-				<!--<div class="about-msg">
 
-					<h3>A little overview...</h3>
+<div class="clear"></div>
 
-					<p>As a fledgling designer I stumbled across online graphics communities dedicated to helping out novice designers. This is where I would discover my passion for design and receive critique on my works.</p>
-					
-					<p>Gradually my skills improved and I began to have a bigger role and presence in the online graphics communities, whilst also helping to lead some. This ultimately improved my skills and knowledge to the point where I was able to design things for other people.</p>
 
-					<p>Since then I have persued design as a career and acquired a skill set in many forms of design, from Web Design and Graphic Design to 3D Modelling and Animation.</p>
 
-				</div>-->
+<div id="content-wrapper">
 
-		<!-- MAP -->
+<div class="imagebox_wrapper">
+        <?php
+//            include 'includes/getOrientation.php';
 
-			<!--	<div class="map">
-			
-							<h3>ON THE MAP</H3>
+            $webDesign = simplexml_load_file('http://backend.deviantart.com/rss.xml?q=gallery:ChubbaART/43022466');
+            $channel = $webDesign->channel;
 
-		    				<iframe width='100%' height='450' frameBorder='0' src='http://a.tiles.mapbox.com/v3/chubba12.map-beryl0x9.html#7/51.741/0.11899999999997968'></iframe>
-
-		        </div>-->
-
-		<!-- MAP END -->
-
-	</div>
-
-	<div class="clear"></div>
-		
-	<!--
-	<div class="designer">Hello</div>
-	-->
+               foreach($channel->item as $item):
+                    $title = $item->title;
+                    $url   = $item->link;
+                    $date  = $item->pubDate;
+                    $thumb = $item->children('media', true)->thumbnail->{1}->attributes()->url;
+                    $image = $item->children('media', true)->content->attributes()->url;
+ //                   $orientation = getOrientation("$image");
+	            ?>
+            <div class="imagebox"><a href="<?= $image; ?>"><img src="<?= $thumb; ?>" class="<?= $orientation; ?> lazy" alt="<?= $title; ?>"/></a></div>
+            <?php endforeach;
+        ?>
 	</div>
 
 </div>
 
-<footer>
 
-	<p class="copyright">Copyright Jacob Hammond 2013, All Rights Reserved.</p>
-	<p class="fb">FB LIKE [BOX]</p>
+<div class="clear"></div>
+	
+<!--
+<div class="designer">Hello</div>
+-->
+</div>
 
-</footer>
-
+</div>
 </body>
 
 <script src="js/jquery-1.9.1.min.js" charset="utf-8"></script>
