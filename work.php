@@ -88,7 +88,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
                     $date  = $item->pubDate;
                     $thumb = $item->children('media', true)->thumbnail->{1}->attributes()->url;
                     $image = $item->children('media', true)->content->attributes()->url;
- 	                $orientation = getOrientation("$image");
+ 	                  $orientation = getOrientation("$image");
 	            ?>
             <div class="imagebox"><a href="<?= $image; ?>"><img src="images/preloader.png" data-original="<?= $thumb; ?>" class="<?= $orientation ?> lazy" alt="<?= $title; ?>"/></a></div>
             <?php endforeach;

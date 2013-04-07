@@ -3,7 +3,7 @@
 
 function getOrientation( $imageSrc ) {
 
-$imageSrc = $dom->getElementsByTagName('img');
+$imageSrc = getElementsByTagName('img');
 
     foreach ($imageSrc as $image) {
 
