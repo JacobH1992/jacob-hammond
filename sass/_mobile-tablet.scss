@@ -1,0 +1,118 @@
+
+$tablet-horz: 1024px;
+$tablet-vert: 720px;
+
+@media (max-width: $tablet-horz) {
+
+	h2 {font-size:1.3em;}
+
+	#main-wrapper
+	{
+		width: 94%;
+		margin: 0;
+		padding: 3%;
+	}
+
+	#logo
+	{
+		margin-top: 3%;
+	}
+
+	#nav
+	{
+		display: none;
+	}
+
+	.top-msg
+	{
+		margin-bottom:30px;
+	}
+
+
+	#content-wrapper
+	{
+		margin-top: 30px;
+	}
+
+	.content-box-wrapper
+	{
+		width: $full-width;
+	}
+
+	.content-box-wrapper:hover > .content-box
+	{
+		@include hover-shrink-none;
+	}
+	
+	.content-box
+	{
+		height: 250px;
+		margin-bottom: 4%;
+	}
+
+		.content-box h3 
+		{
+			padding: 25px 40px 0px 40px;
+
+		}
+		.content-box p 
+		{
+			padding: 15px 40px 40px 40px;
+
+		}
+		.content-box-img 
+		{
+			top:-30px;
+		}
+
+	.me-pic
+	{
+		width: 30%;
+		height: auto;
+		margin-bottom: 3%;
+		margin-top: 3%;
+	}
+
+	.about-msg
+	{
+		width: 100%;
+		margin-top: 2%;
+		padding-left: 0;
+		padding-bottom: 5%;
+	}
+
+		.about-msg h3
+		{
+			font-size:1.6em;
+		}
+
+	.map
+	{
+		width: 100%;
+		padding-left: 0;
+		top: 20%;
+	}
+
+	.imagebox
+	{
+    	width: 24%;
+    	padding-bottom: 25%;
+    	margin: 0 0 1% 1%;
+    }
+
+
+}
+
+@media (max-width: $tablet-vert) {
+
+	h2 {font-size:1em;}
+	h3 {font-size:1.4em;}
+	p {font-size:1.2em;}
+
+	.about-msg h3
+	{
+		font-size:1.4em;
+	}
+
+}
+

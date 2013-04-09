@@ -1,0 +1,85 @@
+/*#about-wrap
+{
+	padding-left: 6%;
+	padding-right: 6%;
+	margin-left: auto;
+	margin-right: auto;
+	width: 100%;
+	height:500px;
+	background: #666;
+}
+*/
+
+.me-pic
+{
+	float: left;
+	@include height-fix;
+	width: 20%;
+	padding: 0% 3% 0% 0%;
+	position: relative;
+	top: -10%;
+	@include hover-fade-normal;
+}
+
+	.me-pic img 
+	{
+		height: auto;
+		width: 100%;
+	}
+
+
+.about-msg
+{
+	float: left;
+	width: 65%;
+	@include height-fix;
+	padding: 75px 0% 0% 5%;
+	z-index: 100;
+	@include hover-fade-normal;
+}
+
+	.about-msg p, .about-msg h3, .about-msg a, .map h3 
+	{
+		color: #333;
+		margin-bottom: 20px;
+		line-height: 1;
+	}
+
+	.about-msg h3
+	{
+		font-size: 2.2em;
+		font-weight: 800;
+	}
+
+	.about-msg p
+	{
+		font-size: 1.6em;
+	}
+
+	.about-msg img
+	{
+		width: 100%;
+		height: auto;
+	}
+
+	.arrow
+	{
+		position: relative;
+		top:-50%;
+		left:85%;
+		width:100px;
+		height: 60px;
+		background: url("../images/arrow-right.png") center no-repeat;
+	}
+
+.map
+{
+	width:71.333%;
+	height:400px;
+	overflow:hidden;
+	position: relative;
+	top:40%;
+	padding-left: 4%;
+}
+
+

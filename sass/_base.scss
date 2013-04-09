@@ -1,0 +1,57 @@
+
+body,html
+{
+	background: #666;
+	font-family: "Source Sans Pro", Arial, Calibri, sans-serif;
+	font-weight: 400;
+	color:#000;
+}
+
+*
+{
+	margin: 0;
+	padding: 0;
+	border:0;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+  display: block;
+}
+
+::selection { color:#FFF; background:#CCC; }
+
+h1 {font-size:5em; font-weight:700;}
+h2 {font-size:2em; font-weight:400;}
+h3 {font-size:2em; font-weight:600;}
+
+a {
+	color: #FFF;
+	text-decoration: underline;
+  	
+  	&:hover { color:#000; }
+}
+
+p
+{
+font-size:1.5em; 
+margin-bottom:20px;
+color: #FFF;
+}
+
+.clear
+{
+	clear:left;
+}
+
+#main-wrapper
+{
+	background: url("../images/bg.jpg") top left #000;
+	background-color: #FFF;
+	background-size: cover;
+	width: 94%;
+	margin: 1% auto 1% auto;
+	overflow: hidden;
+	height: 100%;
+	padding: 2%;
+}
+

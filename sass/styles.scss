@@ -1,0 +1,52 @@
+@charset "utf-8";
+
+
+@import "variables";
+@import "mixins";
+
+@import "base";
+@import "header";
+@import "content";
+
+@import "about";
+
+@import "work";
+
+@import "footer";
+
+@import "mobile-screen";
+@import "mobile-tablet"; 
+@import "mobile-mobile";
+
+
+#ie-message
+{
+	position:fixed;
+	height:200%;
+	width:100%;
+	margin-top:-20px;
+	background:url(../images/bg-trans.png) repeat;
+	z-index:9999999 !important;
+	display: none;
+}
+#ie-message-text 
+{
+	color:#FFF;
+	width:45%;
+	height:auto;
+	overflow:hidden;
+	margin-top:10%;
+	margin-left:auto;
+	margin-right:auto;
+	background:#222;
+	padding:2% 1% 2% 1%;
+	text-align:center;
+	opacity:0.99;
+	-webkit-box-shadow:  1px 1px 2px 1px #000000;    
+    box-shadow:  0px 0px 2px 0px #FFFFFF;
+	-webkit-border-radius: 20px;
+	border-radius: 20px;
+}
+
+
+
