@@ -39,6 +39,19 @@
 	 zoom: 1;
 	}
 
+  .image-description
+  {
+    float: left;
+    width: 15.666%;
+    margin: 0 0 1% 1%;
+  }
+
+    .image-description p
+    {
+      font-size: .6em;
+      color: #000;
+    }
+
 .landscape 
 {
   height: 100%;

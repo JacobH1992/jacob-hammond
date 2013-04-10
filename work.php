@@ -92,16 +92,54 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
                     $title = $item->title;
                     $url   = $item->link;
                     $date  = $item->pubDate;
+                    $description = $item->children('media', true)->description;
                     $thumb = $item->children('media', true)->thumbnail->{1}->attributes()->url;
                     $image = $item->children('media', true)->content->attributes()->url;
  	                  $orientation = getOrientation($image);
-	            ?>
-            <div class="imagebox"><a href="<?= $image; ?>"><img src="images/preloader.png" data-original="<?= $thumb; ?>" class="<?= $orientation ?> lazy lazybox" rel="group" alt="<?= $title; ?>"/></a></div>
+
+                    /*$description = preg_replace('/[\-]+$/','<li>',$description);  // strip off "-" and replace with "<li>" 
+                    $description = preg_replace('/[\<br/>]+$/','</li>',$description);  // strip off "</br>" and replace with "</li>" 
+
+                        the [] match whatever's between them by the looks of it
+                        also, problem with that is, all the <br/>s will be replaced
+                        not just the ones you want
+
+                        you need to match ...
+                        - ANY TEXT HERE<br />
+                        so a string that starts with "- " and ends with "<br/>"
+                        ignore preg_replace for the time being
+                        i think there's preg_match as well
+                        which will return an array of matches
+                        that'll be good.
+                        so you'll have
+                        1. string before the bullet points
+                        2. array of matches
+                        3. string after the bullet points
+                        then just concat them all together at the end 
+                        */
+
+              ?>
+              
+
+<div class="image-title"><h3><?= $title; ?></h3></div>
+              <div class="imagebox">
+
+                
+
+                <a href="<?= $image; ?>"><img src="images/preloader.png" data-original="<?= $thumb; ?>" class="<?= $orientation ?> lazy" rel="group" alt="<?= $title; ?>"/></a>
+
+               
+
+
+              </div>
+ <div class="image-description"><p><?= $description; ?></p></div>
+
             <?php endforeach;
-        ?>
-	    </div>    
+        ?> 
+
+	  </div>    
     
-    </div>
+  </div>
 
 <div class="clear"></div>
 	
@@ -113,9 +151,9 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 
 
 <script src="js/jquery-1.9.1.min.js" charset="utf-8"></script>
-
 <script src="js/modernizr.custom.js" charset="utf-8"></script>
 <script src="js/jqeury-functions.js" charset="utf-8"></script>
+
 <script src="js/jquery.lazyload.js" charset="utf-8"></script>
 <script type="text/javascript" charset="utf-8">
     $(function() {          
@@ -126,7 +164,6 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   	});
    
 </script>
-
 
 <!-- Force HD quality on YouTube videos) -->
 <script type="text/javascript" src="http://www.youtube.com/iframe_api"></script>

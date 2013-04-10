@@ -1,3 +1,4 @@
+@charset "utf-8";
 /* LAYOUT */
 /* EFFECTS */
 /* COLOURS */
@@ -38,8 +39,8 @@ h3 {
 a {
   color: #FFF;
   text-decoration: underline; }
-a:hover {
-  color: #000; }
+  a:hover {
+    color: #000; }
 
 p {
   font-size: 1.5em;
@@ -393,6 +394,15 @@ header a {
 
 .imagebox img:hover {
   zoom: 1; }
+
+.image-description {
+  float: left;
+  width: 15.666%;
+  margin: 0 0 1% 1%; }
+
+.image-description p {
+  font-size: .6em;
+  color: #000; }
 
 .landscape {
   height: 100%; }
