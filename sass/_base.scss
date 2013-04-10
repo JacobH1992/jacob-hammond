@@ -42,12 +42,16 @@ color: #FFF;
 {
 	clear:left;
 }
+.clear-right
+{
+	clear:right;
+}
 
 #main-wrapper
 {
-	background: url("../images/bg.jpg") top left #000;
+	background: url("../images/bg.jpg") top left no-repeat #000;
 	background-color: #FFF;
-	background-size: cover;
+	background-size: 100% auto;
 	width: 94%;
 	margin: 1% auto 1% auto;
 	overflow: hidden;

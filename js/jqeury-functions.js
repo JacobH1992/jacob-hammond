@@ -15,5 +15,17 @@ $('.peek').click(function(){
 	
 });
 
+
+$("#grid-btn").click(function(){
+   $("#detail-view").hide();
+  $("#grid-view").show();
+});
+
+$("#detail-btn").click(function(){
+   $("#grid-view").hide();
+  $("#detail-view").show();
+});
+
+
  
 

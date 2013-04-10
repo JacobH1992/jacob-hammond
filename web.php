@@ -1,20 +1,20 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<meta name="description" content="The portfolio of multimedia designer Jacob Hammond (ChubbaART). Featuring digital art, website design, 3d modelling and animation, graphic design, photography and even more."/>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="description" content="The portfolio of multimedia designer Jacob Hammond (ChubbaART). Featuring digital art, website design, 3d modelling and animation, graphic design, photography and even more."/>
 
-<meta name="author" content="Jacob Hammond"/>
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+  <meta name="author" content="Jacob Hammond"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
 
-<title>Jacob Hammond | Multimedia Designer</title>
+  <title>Jacob Hammond | Multimedia Designer</title>
 
 
-<link rel="stylesheet" href="css/styles.css" type="text/css" media="screen" />
-<link rel="stylesheet" href="css/normalize.css" type="text/css" media="screen" />
+  <link rel="stylesheet" href="css/styles.css" type="text/css" media="screen" />
+  <link rel="stylesheet" href="css/normalize.css" type="text/css" media="screen" />
 
-<link rel="shortcut icon" href="images/favicon.ico">
-<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,400,600,700' rel='stylesheet' type='text/css'>
+  <link rel="shortcut icon" href="images/favicon.ico"/>
+  <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,400,600,700' rel='stylesheet' type='text/css'/>
 
 </head>
 <!--[if lt IE 10]>
@@ -80,8 +80,10 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 
 </div>
 
+<div id="grid-btn"><a href="#">GRID VIEW</a></div>
+<div id="detail-btn"><a href="#">DETAIL VIEW</a></div>
 
-  <div id="work-nav">
+  <!--<div id="work-nav">
     <ul>
       <li>WEBSITE DESIGN</li>
       <li>GRAPHIC DESIGN</li>
@@ -90,10 +92,47 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
       <li>PHOTOGRAPHY</li>
       <li>OTHER</li>
     </ul>
-  </div> 
+  </div> --> 
+
+<!-- DETAILS VIEW -->
+
+    <div id="detail-view">
+
+        <?php
+
+            $webDesign = simplexml_load_file('http://backend.deviantart.com/rss.xml?q=gallery:ChubbaART/43022466');
+            $channel = $webDesign->channel;
+
+               foreach($channel->item as $item):
+                    $title = $item->title;
+                    $url   = $item->link;
+                    $date  = $item->pubDate;
+                    $description = $item->children('media', true)->description;
+                    $thumb = $item->children('media', true)->thumbnail->{1}->attributes()->url;
+                    $image = $item->children('media', true)->content->attributes()->url;
+
+              ?>
+          
+            <div class="work-box" id="red">
+              <div class="clear"></div>
+              <div class="image-title"><h3><?= $title; ?></h3></div>
+              <div class="clear"></div>
+              <div class="image-image"><img src="images/preloader.png" data-original="<?= $image; ?>" class="lazy" alt="<?= $title; ?>"></div>
+              <div class="image-description"><p><?= $description; ?></p></div>
+            </div>
+
+            <?php endforeach;
+        ?> 
+
+    </div>
+
+<!-- END DETAILS VIEW -->
 
 
-    <div class="imagebox-wrapper">
+
+<!-- GRID VIEW -->
+
+    <div class="imagebox-wrapper" id="grid-view">
 
       <div class="imagebox-position">
 
@@ -123,6 +162,8 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
         ?> 
 
      </div>   
+<!-- END GRID VIEW -->
+
 
 	
 </div>
@@ -141,10 +182,10 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 </body>
 
 
-
 <script src="js/jquery-1.9.1.min.js" charset="utf-8"></script>
 <script src="js/modernizr.custom.js" charset="utf-8"></script>
 <script src="js/jqeury-functions.js" charset="utf-8"></script>
+
 
 <script src="js/jquery.lazyload.js" charset="utf-8"></script>
 <script type="text/javascript" charset="utf-8">
@@ -154,8 +195,8 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
             failurelimit : 0
         });
   	});
-   
-</script>
+
+</script>  
 
 <!-- Force HD quality on YouTube videos) -->
 <script type="text/javascript" src="http://www.youtube.com/iframe_api"></script>

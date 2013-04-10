@@ -93,11 +93,32 @@ $tablet-vert: 720px;
 		top: 20%;
 	}
 
+
+
+	.work-box
+  	{
+    width: 92%;
+    float: left;
+    @include height-fix;
+    padding:4%;
+    margin-bottom: 1%;
+  	}
+
 	.imagebox
 	{
     	width: 24%;
     	padding-bottom: 25%;
     	margin: 0 0 1% 1%;
+    }
+
+    .image-title h3
+	{
+	   font-size: 1.4em;
+	}
+    
+    .image-description p
+    {
+      font-size: 0.8em;
     }
 
 

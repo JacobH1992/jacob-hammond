@@ -1,0 +1,54 @@
+#grid-view
+{
+  display: none;
+}
+
+  .imagebox-wrapper
+  {
+    width: 100%;
+    overflow: auto;
+    @include hover-fade-normal;
+  }
+
+  .imagebox-position
+  {
+    margin-left: -1%;
+  }
+
+  .imagebox
+  {
+    width: 15.666%;
+    padding-bottom: 15.666%;
+    margin: 0 0 1% 1%;
+    float: left;
+    position: relative;
+    overflow: hidden;
+    @include hover-fade-normal;
+    @include border-radius-full;
+  }
+
+  .imagebox:hover
+  {
+     @include hover-shrink;
+     opacity: 0.8;
+     filter: alpha(opacity = 80);
+  }
+
+  .imagebox img
+  {
+    position: absolute;
+  }
+    .imagebox img:hover
+    {
+     zoom: 1;
+    }
+
+  .landscape  
+  {
+    height: 100%;
+  }
+
+  .portrait
+  {
+    width: 100%;
+  }

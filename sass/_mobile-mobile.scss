@@ -41,6 +41,42 @@
   	margin: 0 0 1% 1%;
  	}
 
+
+    .image-description p
+    {
+      font-size: 0.8em;
+    }
+
+}
+
+@media (max-width: 420px) {
+
+ 	.work-box
+ 	{
+ 		margin: 0 0 20px 0;
+ 	}
+
+ 	.image-title
+	{
+		width: 100%;
+	   	margin: 0 0 2% 0;
+	}
+	
+	.image-title h3
+	{
+		font-size: 1em;
+	}
+    
+ 	.image-image
+ 	{
+	    width: 100%;
+	 	margin: 0 0 2% 0;
+    }
+    .image-description 
+	{
+		width: 100%;
+	}
+
 }
 
 @media (max-width: 320px) {
@@ -66,7 +102,5 @@
 			font-size: 1.2em;
 			font-weight: 800;
 		}
-
-
 }
 
