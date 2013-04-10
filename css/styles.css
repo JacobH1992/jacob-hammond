@@ -395,13 +395,17 @@ header a {
 .imagebox img:hover {
   zoom: 1; }
 
-.image-description {
+.image-description, .image-image, .image-title {
   float: left;
-  width: 15.666%;
+  width: 49%%;
   margin: 0 0 1% 1%; }
 
+.image-image img {
+  width: 100%;
+  height: auto; }
+
 .image-description p {
-  font-size: .6em;
+  font-size: 1m;
   color: #000; }
 
 .landscape {

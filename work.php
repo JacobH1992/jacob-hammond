@@ -121,18 +121,20 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
               ?>
               
 
-<div class="image-title"><h3><?= $title; ?></h3></div>
-              <div class="imagebox">
+          <!-- <div class="image-title"><h3><?= $title; ?></h3></div>
 
-                
+              <div class="imagebox">  
 
                 <a href="<?= $image; ?>"><img src="images/preloader.png" data-original="<?= $thumb; ?>" class="<?= $orientation ?> lazy" rel="group" alt="<?= $title; ?>"/></a>
 
-               
+              </div>-->
 
 
-              </div>
- <div class="image-description"><p><?= $description; ?></p></div>
+            <div class="image-title"><h3><?= $title; ?></h3></div>
+            <div class="clear"></div>
+            <div class="image-image"><img src="images/preloader.png" data-original="<?= $image; ?>" class="lazy" alt="<?= $title; ?>"</div>
+            <div class="clear"></div>
+            <div class="image-description"><p><?= $description; ?></p></div>
 
             <?php endforeach;
         ?> 
