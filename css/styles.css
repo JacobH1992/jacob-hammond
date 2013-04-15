@@ -67,9 +67,10 @@ p {
 }
 
 #main-wrapper {
-  background: url("../images/bg.jpg") top left no-repeat black;
+  /*	background: url("../images/bg.jpg") top left no-repeat #FFF;*/
+  background: url("../images/bg-paper.jpg") repeat white;
   background-color: #FFF;
-  background-size: 100% auto;
+  /*background-size: 100% auto;*/
   width: 94%;
   margin: 1% auto 1% auto;
   overflow: hidden;
@@ -224,7 +225,11 @@ header a {
   margin-bottom: 1%;
 }
 
-.content-box-wrapper:hover > .content-box {
+.content-box-wrapper a {
+  text-decoration: none;
+}
+
+.content-box-wrapper a:hover > .content-box {
   opacity: 0.8;
   filter: alpha(opacity=80);
   transform: scale(0.9, 0.9);
@@ -457,8 +462,8 @@ header a {
   margin-bottom: 2%;
 }
 
-.image-description, .image-image {
-  width: 48%;
+.image-image {
+  width: 43%;
 }
 
 .image-image, .image-title {
@@ -466,19 +471,20 @@ header a {
 }
 
 .image-title {
-  width: 96%;
+  width: 100%;
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
   filter: dropshadow(color=black, offx=1, offy=1);
 }
 
 .image-title h3 {
-  font-size: 2.4em;
+  font-size: 3em;
   color: white;
   text-transform: uppercase;
   margin: 0 0 2% 0;
 }
 
 .image-description {
+  width: 48%;
   float: right;
 }
 

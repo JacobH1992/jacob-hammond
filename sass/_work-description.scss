@@ -51,9 +51,9 @@
     margin-bottom: 2%;
   }
 
-    .image-description, .image-image
+    .image-image
     {
-      width: 48%;
+      width: 43%;
     }
 
     .image-image, .image-title
@@ -63,13 +63,13 @@
 
     .image-title
     {
-      width: 96%;
+      width: 100%;
       @include text-shadow;
     }
 
       .image-title h3
       {
-        font-size: 2.4em;
+        font-size: 3em;
         color: white;
         text-transform: uppercase;
         margin: 0 0 2% 0;
@@ -77,6 +77,7 @@
 
     .image-description
     {
+      width:48%;
       float: right;
     }
 

@@ -21,7 +21,13 @@
 	margin-bottom: 1%;
 }
 
-.content-box-wrapper:hover > .content-box
+.content-box-wrapper a
+{
+	text-decoration: none;
+}
+
+
+.content-box-wrapper a:hover > .content-box
 {
 	opacity: 0.8;
 	filter: alpha(opacity = 80);
