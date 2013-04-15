@@ -17,14 +17,12 @@ header a {text-decoration: none;}
 	height: 100px;
 	background: #666;
 	color: #FFF;
-	@include hover-fade-normal;
+	@include hover-fade-fast;
 }
 
 	#logo:hover
 	{
 		color: #000;
-		cursor: pointer;
-		@include hover-shrink;
 	}
 
 	#logo h1
@@ -60,12 +58,32 @@ header a {text-decoration: none;}
 		background: #666;
 		color: #FFF;
 		font-weight:600;
-		@include hover-fade-normal;
+		@include hover-fade-fast;
 	}
 	#nav li:hover
 	{
 		color: #000;
-		cursor: pointer;
-		@include hover-shrink;
+	}
+
+
+
+.top-msg
+{
+	width:$full-width;
+	@include height-fix;
+	float: left;
+	margin-bottom:60px;
+	font-size: 2em;
+	font-weight: 100;
+	color: #666;
+	line-height: 1;	
+	z-index: 10;
+}
+
+	.top-msg span
+	{
+		font-weight: 700;
+		font-size: 1.4em;
+		color: #333;
 	}
 

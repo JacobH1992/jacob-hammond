@@ -59,3 +59,33 @@ color: #FFF;
 	padding: 2%;
 }
 
+.blue{
+	background: $box-blue;
+}
+
+.cyan{
+	background: $box-cyan;
+}
+.green{
+	background: $box-green;
+}
+.red{
+	background: $box-red;
+}
+.orange{
+	background: $box-orange;
+}
+.yellow{
+	background: $box-yellow;
+}
+.purple{
+	background: $box-purple;
+}
+.grey{
+	background: #666;
+}
+
+.cyan, .blue, .green, .red, .orange, .yellow, .purple{
+	@include bg-cover;
+}
+

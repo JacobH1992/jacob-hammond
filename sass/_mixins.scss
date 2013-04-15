@@ -15,6 +15,9 @@
   background-size: cover;
 }
 
+
+
+
 /* CSS 3 TRANSITIONS */
 
 @mixin hover-fade-normal
@@ -50,6 +53,10 @@
 
 /*--*/
 
+
+
+/* ROLLOVER EFFECTS */
+
 @mixin hover-shrink
 {
 	transform: scale(0.75, 0.75);
@@ -76,6 +83,10 @@
 }
 
 
+
+
+/* CSS3 STYLING */
+
 @mixin border-radius
 {
 	-webkit-border-top-left-radius: 5px;
@@ -94,4 +105,22 @@
 	-moz-border-radius: 5px;
 	border-radius: 5px;
 	border-radius: 5px;
+}
+
+@mixin image-shadow
+{
+	-webkit-box-shadow: 0px 0px 15px rgba(50, 50, 50, 0.5);
+	-moz-box-shadow:    0px 0px 15px rgba(50, 50, 50, 0.5);
+	box-shadow:         0px 0px 15px rgba(50, 50, 50, 0.5);
+}
+
+@mixin text-shadow
+{
+	text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+    filter: dropshadow(color=#000000, offx=1, offy=1);
+}
+
+@mixin text-shadow-none
+{
+	text-shadow: 0px 0px 0px rgba(0, 0, 0, 0);
 }

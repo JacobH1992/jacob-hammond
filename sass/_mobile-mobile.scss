@@ -13,7 +13,6 @@
 	.content-box p 
 	{
 		padding: 10px 30px 20px 30px;
-
 	}
 
 	.about-msg h3
@@ -41,8 +40,7 @@
   	margin: 0 0 1% 1%;
  	}
 
-
-    .image-description p
+    .image-description p, .image-description ul
     {
       font-size: 0.8em;
     }
@@ -50,6 +48,11 @@
 }
 
 @media (max-width: 420px) {
+
+ 	.content-box p 
+	{
+		font-size: 1em;
+	}
 
  	.work-box
  	{
@@ -83,7 +86,7 @@
 
 	h2 {font-size:.5em;}
 	h3 {font-size:1.2em;}
-	p{ font-size:1em;}
+	p  {font-size:1em;}
 
 
 	.content-box h3 

@@ -17,6 +17,7 @@
   <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,400,600,700' rel='stylesheet' type='text/css'/>
 
 </head>
+
 <!--[if lt IE 10]>
 <style>
 #nav{width:420px;}
@@ -113,14 +114,12 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 
               ?>
           
-            <div class="work-box" id="red">
-              <div class="clear"></div>
+            <div class="work-box red">
               <div class="image-title"><h3><?= $title; ?></h3></div>
-              <div class="clear"></div>
               <div class="image-image"><img src="images/preloader.png" data-original="<?= $image; ?>" class="lazy" alt="<?= $title; ?>"></div>
               <div class="image-description"><p><?= $description; ?></p></div>
             </div>
-
+         
             <?php endforeach;
         ?> 
 

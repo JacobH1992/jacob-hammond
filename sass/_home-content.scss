@@ -12,26 +12,6 @@
 	margin-left: -1%;
 }
 
-.top-msg
-{
-	width:$full-width;
-	@include height-fix;
-	float: left;
-	margin-bottom:60px;
-	font-size: 2em;
-	font-weight: 100;
-	color: #666;
-	line-height: 1;	
-	z-index: 10;
-}
-
-	.top-msg span
-	{
-		font-weight: 700;
-		font-size: 1.4em;
-		color: #333;
-	}
-
 .content-box-wrapper
 {
 	@include height-fix;
@@ -54,9 +34,9 @@
 	width:100%;
 	height: 400px;
 	overflow:hidden;
-	background: #666;
 	@include hover-fade-normal;
 	z-index: 10;
+	@include text-shadow;
 }
 
 	.content-box h3
@@ -69,26 +49,28 @@
 	{
 		padding: 20px 60px 60px 60px;
 		text-align:left;
-		font-weight:100;
+		font-weight:400;
 	}
 
 	.content-box-img
 	{
 		@include height-fix;
+		width: 94%;
 		top: -30px;
 		left:3%;
 		position: relative;
+		@include image-shadow;
+		@include border-radius;
 	}
 
 	.content-box-img img
 	{
-		width:94%;
+		width:100%;
 		@include height-fix;
 		padding-bottom:5px;
 		position: relative;
 		top:0;
 		left: 0;
-
 		@include border-radius;
 	}
 
@@ -96,33 +78,6 @@
 	opacity:1;
 }
 
-
-#blue{
-	background: $box-blue;
-}
-
-#cyan{
-	background: $box-cyan;
-}
-#green{
-	background: $box-green;
-}
-#red{
-	background: $box-red;
-}
-#orange{
-	background: $box-orange;
-}
-#yellow{
-	background: $box-yellow;
-}
-#purple{
-	background: $box-purple;
-}
-
-#cyan, #blue, #green, #red, #orange, #yellow, #purple{
-	@include bg-cover;
-}
 /* CONTENT BOXES END */
 
 .designer
