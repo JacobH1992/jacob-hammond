@@ -15,9 +15,9 @@
   <link rel="shortcut icon" href="images/favicon.ico"/>
   <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,400,600,700' rel='stylesheet' type='text/css'/>
 
-</head>
+<!--[if lt IE 9]>
+<script src="js/respond.js"></script>
 
-<!--[if lt IE 10]>
 <style>
 #nav{width:420px;}
 
@@ -39,12 +39,14 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 }
 </style>
 <div id="ie-message">
-	<div id="ie-message-text">
-		<p style="font-weight:800; font-size:2em">You are viewing this website using Internet Explorer 7.</p><p>This website may not display correctly in Internet Explorer 7 and is best viewed using Chrome, Firefox or Internet Explorer 9+.</p><p>Please come back using one of these browsers or visit my blog instead:</p><br/>
-		<a style="font-size:2em;" href="http://chubbaart.tumblr.com/">chubbaart.tumblr.com</a><br/><br/><div class="peek"><a href="#">Look anyway -></a></div>
-	</div>
+  <div id="ie-message-text">
+    <p style="font-weight:800; font-size:2em">You are viewing this website using Internet Explorer 7.</p><p>This website may not display correctly in Internet Explorer 7 and is best viewed using Chrome, Firefox or Internet Explorer 9+.</p><p>Please come back using one of these browsers or visit my blog instead:</p><br/>
+    <a style="font-size:2em;" href="http://chubbaart.tumblr.com/">chubbaart.tumblr.com</a><br/><br/><div class="peek"><a href="#">Look anyway -></a></div>
+  </div>
 </div>
 <![endif]-->
+
+</head>
 
 <body>
 
