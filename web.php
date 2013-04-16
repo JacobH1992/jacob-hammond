@@ -73,7 +73,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 <div id="content-wrapper">
 
     <div class="top-msg">
-        <h2>THE WEBSITE DESIGN WORK OF<br/><span>JACOB HAMMOND</span><br /></h2>
+        <h2>WORK<br/><span>WEBSITE DESIGN</span><br /></h2>
     </div>
 
 </div>
