@@ -8,7 +8,6 @@
   font-size: 1.5em;
 }
 
-
   #work-nav ul 
   {
     width:100%;
@@ -22,7 +21,7 @@
     height:68px;
     padding-top: 40px;  
     background: #666;
-    color: #FFF;
+    color: #000;
     font-weight:600;
     text-align: center;
     @include hover-fade-normal;
@@ -51,11 +50,6 @@
     margin-bottom: 2%;
   }
 
-    .image-image
-    {
-      width: 48%;
-    }
-
     .image-image, .image-title
     {
       float:left;
@@ -70,7 +64,7 @@
       .image-title h3
       {
         font-size: 3em;
-        color: white;
+        color: #000;
         text-transform: uppercase;
         margin: 0 0 2% 0;
       }
@@ -81,18 +75,27 @@
       float: right;
     }
 
+    .image-image 
+    {
+      width: 48%;
+      height: auto;
+      max-height: 650px;
+      overflow: hidden;
+    }
+
       .image-image img
       {
         width: 100%;
         height: auto;
-        @include image-shadow;
+        overflow: hidden;
+/*        @include image-shadow;*/
         @include border-radius-full;
       }
 
       .image-description p, .image-description ul
       {
         font-size: 1.5em;
-        color: #FFF;
+        color: #000;
         font-weight: 400;
         @include text-shadow;
       }

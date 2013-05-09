@@ -12,12 +12,14 @@
 
 <link rel="stylesheet" href="css/styles.css" type="text/css" media="screen" />
 <link rel="stylesheet" href="css/normalize.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="css/swiper.css" type="text/css" media="screen" />
 
 <link rel="shortcut icon" href="images/favicon.ico">
 <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,400,600,700' rel='stylesheet' type='text/css'>
 
-</head>
-<!--[if lt IE 10]>
+<!--[if lt IE 9]>
+<script src="js/respond.min.js"></script>
+
 <style>
 #nav{width:420px;}
 
@@ -39,12 +41,14 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 }
 </style>
 <div id="ie-message">
-	<div id="ie-message-text">
-		<p style="font-weight:800; font-size:2em">You are viewing this website using Internet Explorer 7.</p><p>This website may not display correctly in Internet Explorer 7 and is best viewed using Chrome, Firefox or Internet Explorer 9+.</p><p>Please come back using one of these browsers or visit my blog instead:</p><br/>
-		<a style="font-size:2em;" href="http://chubbaart.tumblr.com/">chubbaart.tumblr.com</a><br/><br/><div class="peek"><a href="#">Look anyway -></a></div>
-	</div>
+  <div id="ie-message-text">
+    <p style="font-weight:800; font-size:2em">You are viewing this website using Internet Explorer 7.</p><p>This website may not display correctly in Internet Explorer 7 and is best viewed using Chrome, Firefox or Internet Explorer 9+.</p><p>Please come back using one of these browsers or visit my blog instead:</p><br/>
+    <a style="font-size:2em;" href="http://chubbaart.tumblr.com/">chubbaart.tumblr.com</a><br/><br/><div class="peek"><a href="#">Look anyway -></a></div>
+  </div>
 </div>
 <![endif]-->
+</head>
+
 
 <body>
 
@@ -93,6 +97,9 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   </div> 
 
 
+
+
+<!-- GRID  VIEW -->
     <div class="imagebox-wrapper">
 
       <div class="imagebox-position">
@@ -124,6 +131,8 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 
      </div>   
 
+<!-- END GRID VIEW -->
+
 	
 </div>
 
@@ -141,7 +150,6 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 </body>
 
 
-
 <script src="js/jquery-1.9.1.min.js" charset="utf-8"></script>
 <script src="js/modernizr.custom.js" charset="utf-8"></script>
 <script src="js/jqeury-functions.js" charset="utf-8"></script>
@@ -153,14 +161,11 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
             effect      : "fadeIn",
             failurelimit : 0
         });
-  	});
-   
+    });
 </script>
 
-<!-- Force HD quality on YouTube videos) -->
-<script type="text/javascript" src="http://www.youtube.com/iframe_api"></script>
-
 <!-- GOOGLE ANALYTICS -->
+
 <script type="text/javascript">
 
   var _gaq = _gaq || [];
@@ -175,5 +180,6 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   })();
 
 </script>
+
 
 </html>

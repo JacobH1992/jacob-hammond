@@ -1,4 +1,3 @@
-@charset "utf-8";
 /* LAYOUT */
 /* EFFECTS */
 /* COLOURS */
@@ -41,8 +40,8 @@ h3 {
 a {
   color: #FFF;
   text-decoration: underline; }
-  a:hover {
-    color: #000; }
+a:hover {
+  color: #000; }
 
 p {
   font-size: 1.5em;
@@ -375,7 +374,7 @@ header a {
   height: 68px;
   padding-top: 40px;
   background: #666;
-  color: #FFF;
+  color: #000;
   font-weight: 600;
   text-align: center;
   -moz-transition: all 0.5s;
@@ -407,9 +406,6 @@ header a {
   padding: 4%;
   margin-bottom: 2%; }
 
-.image-image {
-  width: 48%; }
-
 .image-image, .image-title {
   float: left; }
 
@@ -420,7 +416,7 @@ header a {
 
 .image-title h3 {
   font-size: 3em;
-  color: white;
+  color: #000;
   text-transform: uppercase;
   margin: 0 0 2% 0; }
 
@@ -428,12 +424,17 @@ header a {
   width: 48%;
   float: right; }
 
+.image-image {
+  width: 48%;
+  height: auto;
+  max-height: 650px;
+  overflow: hidden; }
+
 .image-image img {
   width: 100%;
   height: auto;
-  -webkit-box-shadow: 0px 0px 15px rgba(50, 50, 50, 0.5);
-  -moz-box-shadow: 0px 0px 15px rgba(50, 50, 50, 0.5);
-  box-shadow: 0px 0px 15px rgba(50, 50, 50, 0.5);
+  overflow: hidden;
+  /*        @include image-shadow;*/
   -webkit-border-radius: 5px;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
@@ -443,7 +444,7 @@ header a {
 
 .image-description p, .image-description ul {
   font-size: 1.5em;
-  color: #FFF;
+  color: #000;
   font-weight: 400;
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
   filter: dropshadow(color=black, offx=1, offy=1); }
@@ -460,9 +461,6 @@ header a {
   background: #666;
   padding: 5px;
   text-shadow: 0px 0px 0px rgba(0, 0, 0, 0); }
-
-#grid-view {
-  display: none; }
 
 .imagebox-wrapper {
   width: 100%;

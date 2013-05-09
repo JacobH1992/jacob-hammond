@@ -11,12 +11,13 @@
 
   <link rel="stylesheet" href="css/normalize.css" type="text/css" media="screen" />
   <link rel="stylesheet" href="css/styles.css" type="text/css" media="screen" />
+  <link rel="stylesheet" href="css/swiper.css" type="text/css" media="screen" />
 
   <link rel="shortcut icon" href="images/favicon.ico"/>
   <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,400,600,700' rel='stylesheet' type='text/css'/>
 
 <!--[if lt IE 9]>
-<script src="js/respond.js"></script>
+<script src="js/respond.min.js"></script>
 
 <style>
 #nav{width:420px;}
@@ -80,26 +81,14 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 
 </div>
 
-<div id="grid-btn"><a href="#">GRID VIEW</a></div>
-<div id="detail-btn"><a href="#">DETAIL VIEW</a></div>
 
-  <!--<div id="work-nav">
-    <ul>
-      <li>WEBSITE DESIGN</li>
-      <li>GRAPHIC DESIGN</li>
-      <li>3D DESIGN</li>
-      <li>DIGITAL ART</li>
-      <li>PHOTOGRAPHY</li>
-      <li>OTHER</li>
-    </ul>
-  </div> --> 
 
 <!-- DETAILS VIEW -->
 
-    <div id="detail-view">
-
+      <!--  <div class="swiper-container">
+        <div class="swiper-wrapper">
         <?php
-
+/*
             $webDesign = simplexml_load_file('http://backend.deviantart.com/rss.xml?q=gallery:ChubbaART/43022466');
             $channel = $webDesign->channel;
 
@@ -112,25 +101,30 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
                     $image = $item->children('media', true)->content->attributes()->url;
 
               ?>
-          
-            <div class="work-box red">
-              <div class="image-title"><h3><?= $title; ?></h3></div>
-              <div class="image-image"><img src="images/preloader.png" data-original="<?= $image; ?>" class="lazy" alt="<?= $title; ?>"></div>
-              <div class="image-description"><p><?= $description; ?></p></div>
-            </div>
-         
-            <?php endforeach;
+
+          <div class="swiper-slide">
+
+              <div class="image-image"><img src="<?= $image; ?>" alt="<?= $title; ?>"></div>
+
+
+             <!-- <div class="image-title"><h3><?= $title; ?></h3></div>
+              <div class="image-image"><img src="<?= $image; ?>" alt="<?= $title; ?>"></div>
+             <div class="image-description"><p><?= $description; ?></p></div>-->
+          </div>
+
+
+            <?php endforeach;*/
         ?> 
 
-    </div>
-
+        </div>
+        </div>
+-->
 <!-- END DETAILS VIEW -->
-
 
 
 <!-- GRID VIEW -->
 
-    <div class="imagebox-wrapper" id="grid-view">
+    <div class="imagebox-wrapper">
 
       <div class="imagebox-position">
 
@@ -152,17 +146,15 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 
               <div class="imagebox">  
 
-                <a href="<?= $image; ?>"><img src="images/preloader.png" data-original="<?= $thumb; ?>" class="<?= $orientation ?> lazy" rel="group" alt="<?= $title; ?>"/></a>
+                <a href="<?= $image; ?>"><img src="<?= $thumb; ?>" class="<?= $orientation ?>" rel="group" alt="<?= $title; ?>" title="<?= $title; ?>"/></a>
 
               </div>
 
             <?php endforeach;
         ?> 
-
      </div>   
+
 <!-- END GRID VIEW -->
-
-
 	
 </div>
 
@@ -184,6 +176,18 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 <script src="js/modernizr.custom.js" charset="utf-8"></script>
 <script src="js/jqeury-functions.js" charset="utf-8"></script>
 
+<script src="js/swiper.js" charset="utf-8"></script>
+<script type="text/javascript">
+  $(function(){
+    var mySwiper = $('.swiper-container').swiper({
+      //Your options here:
+      mode:'horizontal',
+      loop: true
+      //etc..
+    });
+  })
+</script>
+
 
 <script src="js/jquery.lazyload.js" charset="utf-8"></script>
 <script type="text/javascript" charset="utf-8">
@@ -192,14 +196,11 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
             effect      : "fadeIn",
             failurelimit : 0
         });
-  	});
-
-</script>  
-
-<!-- Force HD quality on YouTube videos) -->
-<script type="text/javascript" src="http://www.youtube.com/iframe_api"></script>
+    });
+</script>
 
 <!-- GOOGLE ANALYTICS -->
+
 <script type="text/javascript">
 
   var _gaq = _gaq || [];
@@ -214,5 +215,6 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   })();
 
 </script>
+
 
 </html>
