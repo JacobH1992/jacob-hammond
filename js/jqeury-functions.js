@@ -15,7 +15,19 @@ $('.peek').click(function(){
 	
 });
 
+$('#more').click(function(){
 
+    $(".about-1").hide();
+    $(".about-2").show();
+	
+});
+
+$('#back').click(function(){
+
+    $(".about-2").hide();
+    $(".about-1").show();
+	
+});
 
  
 

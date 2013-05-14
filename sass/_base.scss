@@ -18,11 +18,11 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   display: block;
 }
 
-::selection { color:#FFF; background:#CCC; }
+::selection { color:#FFF; background:#666; }
 
 h1 {font-size:5em; font-weight:700;}
 h2 {font-size:2em; font-weight:400;}
-h3 {font-size:2em; font-weight:600;}
+h3 {font-size:1.6em; font-weight:800;}
 
 a {
 	color: #FFF;
@@ -90,3 +90,16 @@ color: #FFF;
 	@include bg-cover;
 }
 
+.button
+{
+	display: inline-block;
+	background: #666;
+	padding: 8px;
+	color: #FFF;
+}
+
+.button:hover
+{
+	cursor: pointer;
+	background: #333;
+}
