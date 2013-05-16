@@ -17,6 +17,7 @@
 	.about-msg
 	{
 		width: 67%;
+		padding: 25px 0 0 5%;
 	}
 
 	.about-msg h3
@@ -66,25 +67,13 @@
 		padding: 3%;
 	}
 
-	.imagebox
-	{
-	  width: 19%;
-	  padding-bottom: 19%;
-	  margin: 0 0 1% 1%;
-	  float: left;
-	  position: relative;
-	  overflow: hidden;
-	}
-
-	.image-title h3
-	{
-	   font-size: 1.8em;
-	}
-    
-    .image-description p, .image-description ul
-    {
-      font-size: 1.2em;
-    }
+  .image-container
+  {
+    width: 28%;
+    margin: 0 0 1% 1%;
+    float: left;
+    padding: 2%;
+  }
 
 }
 

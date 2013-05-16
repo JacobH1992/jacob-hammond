@@ -27,23 +27,36 @@
 		margin-bottom: 8%;
 		padding: none;
 	}
+  
+  .image-container
+  {
+    width: 90%;
+    margin: 0 0 5% 0;
+    float: left;
+    padding: 4%;
+  }
 
+  .imagebox
+  {
+    float: left;
+    width: 100%;
+    padding-bottom: 25%;
+    margin: 4% 0 0 0;
+    border-radius: 0px;
+  }
+  .image-description
+  {
+    width:100%;
+    float: left;
+    margin: 4% 0 0 0;
+  }
+
+  .landscape{width:100%; height: auto;}
+	
 	footer p
 	{
 		font-size: .55em;
 	}
-
-	.imagebox 
-	{
-    width: 49%;
-    padding-bottom: 49%;
-  	margin: 0 0 1% 1%;
- 	}
-
-    .image-description p, .image-description ul
-    {
-      font-size: 0.8em;
-    }
 
 }
 
@@ -52,32 +65,6 @@
  	.content-box p 
 	{
 		font-size: 1em;
-	}
-
- 	.work-box
- 	{
- 		margin: 0 0 20px 0;
- 	}
-
- 	.image-title
-	{
-		width: 100%;
-	   	margin: 0 0 2% 0;
-	}
-	
-	.image-title h3
-	{
-		font-size: 1em;
-	}
-    
- 	.image-image
- 	{
-	    width: 100%;
-	 	margin: 0 0 2% 0;
-    }
-    .image-description 
-	{
-		width: 100%;
 	}
 
 }

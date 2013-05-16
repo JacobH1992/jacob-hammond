@@ -124,9 +124,11 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 
 <!-- GRID VIEW -->
 
-    <div class="imagebox-wrapper">
+    <div id="imagebox-wrapper">
 
-      <div class="imagebox-position">
+      <div class="imagebox-container-position">
+
+        <div class="masonry-wrap">
 
         <?php
         include 'php/image-orientation.php';
@@ -144,15 +146,23 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
                     $orientation = getOrientation($image);
               ?>
 
-              <div class="imagebox">  
+              <div class="image-container red">
 
-                <a href="<?= $image; ?>"><img src="<?= $thumb; ?>" class="<?= $orientation ?>" rel="group" alt="<?= $title; ?>" title="<?= $title; ?>"/></a>
+                <div class="image-title"><h3><?= $title; ?></h3></div>  
 
+                <div class="imagebox">  
+                   <a href="<?= $image; ?>"><img src="<?= $thumb; ?>" class="<?= $orientation ?>" rel="group" alt="<?= $title; ?>" title="<?= $title; ?>"/></a>
+                 </div>                           
+              
+                <div class="image-description"><p><?= $description; ?></p></div>
+              
               </div>
 
             <?php endforeach;
         ?> 
-     </div>   
+        
+        </div>   
+    </div>
 
 <!-- END GRID VIEW -->
 	
@@ -176,28 +186,46 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 <script src="js/modernizr.custom.js" charset="utf-8"></script>
 <script src="js/jqeury-functions.js" charset="utf-8"></script>
 
-<script src="js/swiper.js" charset="utf-8"></script>
-<script type="text/javascript">
-  $(function(){
-    var mySwiper = $('.swiper-container').swiper({
-      //Your options here:
-      mode:'horizontal',
-      loop: true
-      //etc..
+<script src="js/masonry.min.js" charset="utf-8"></script>
+  <script>
+  $(document).ready(function(){
+    $('.masonry-wrap').masonry({
+      // options
+      
+      columnWidth: function( containerWidth ) {
+                             
+          //return containerWidth /3;
+              if ( $(window).width() > 1400) {
+                return containerWidth /4;             // how many boxes per row
+              }
+              else if ( $(window).width() > 1024){
+                return containerWidth /3;             // how many boxes per row
+              }
+              else {
+                return containerWidth /2;             // how many boxes per row
+              }
+                },   
+          isAnimated: true
     });
-  })
-</script>
+  });
+  </script>
+  
+  <script>
+/*  $(function(){
 
+    if ( $(window).width() < 1025) {
+        $('.image-container').css({"width":"100%"});
+      }
+    else if ( $(window).width() < 1400) {
+        $('.image-container').css({"width":"45%"});
+      }
+    else {
+        $('.image-container').css({"width":"28%"});
+    }  
+  */
+  </script>
 
-<script src="js/jquery.lazyload.js" charset="utf-8"></script>
-<script type="text/javascript" charset="utf-8">
-    $(function() {          
-        $("img.lazy").show().lazyload({
-            effect      : "fadeIn",
-            failurelimit : 0
-        });
-    });
-</script>
+ 
 
 <!-- GOOGLE ANALYTICS -->
 

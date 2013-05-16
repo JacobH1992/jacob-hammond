@@ -367,7 +367,7 @@ header a {
   width: 70%;
   height: auto;
   overflow: hidden;
-  padding: 25px 0 0 5%;
+  padding: 55px 0 0 5%;
   z-index: 100;
 }
 
@@ -456,65 +456,31 @@ header a {
 }
 
 /*WORK NAV END*/
-#detail-view {
-  display: block;
-}
-
-.work-box {
-  width: 92%;
-  float: left;
-  height: auto;
-  overflow: hidden;
-  padding: 4%;
-  margin-bottom: 2%;
-}
-
-.image-image, .image-title {
-  float: left;
-}
-
 .image-title {
+  float: left;
   width: 100%;
+}
+
+.image-title h3 {
+  color: #FFF;
+  text-transform: uppercase;
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
   filter: dropshadow(color=black, offx=1, offy=1);
 }
 
-.image-title h3 {
-  font-size: 3em;
-  color: #000;
-  text-transform: uppercase;
-  margin: 0 0 2% 0;
-}
-
 .image-description {
-  width: 48%;
-  float: right;
-}
-
-.image-image {
-  width: 48%;
-  height: auto;
-  max-height: 650px;
-  overflow: hidden;
-}
-
-.image-image img {
   width: 100%;
-  height: auto;
-  overflow: hidden;
-  /*        @include image-shadow;*/
-  -webkit-border-radius: 5px;
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  -moz-border-radius: 5px;
-  border-radius: 5px;
-  border-radius: 5px;
+  float: left;
+  margin: 4% 0 0 0;
+}
+
+.image-description p {
+  float: left;
 }
 
 .image-description p, .image-description ul {
-  font-size: 1.5em;
-  color: #000;
-  font-weight: 400;
+  font-size: 1em;
+  color: #FFF;
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
   filter: dropshadow(color=black, offx=1, offy=1);
 }
@@ -531,30 +497,34 @@ header a {
   color: white;
   background: #666;
   padding: 5px;
+  margin: 2px;
   text-shadow: 0px 0px 0px rgba(0, 0, 0, 0);
 }
 
-.imagebox-wrapper {
+#imagebox-wrapper {
   width: 100%;
-  overflow: auto;
-  -moz-transition: all 0.5s;
-  /* Firefox 4 */
-  -webkit-transition: all 0.5s;
-  /* Safari and Chrome */
-  -o-transition: all 0.5s;
-  /* Opera */
-  transition: all 0.5s;
+  overflow: hidden;
+  height: auto;
 }
 
-.imagebox-position {
+.image-container {
+  float: left;
+  height: auto;
+  overflow: hidden;
+  width: 19%;
+  margin: 0 0 1% 1%;
+  padding: 2%;
+}
+
+.imagebox-container-position {
   margin-left: -1%;
 }
 
 .imagebox {
-  width: 15.666%;
-  padding-bottom: 15.666%;
-  margin: 0 0 1% 1%;
   float: left;
+  width: 100%;
+  padding-bottom: 35%;
+  margin: 4% 0 0 0;
   position: relative;
   overflow: hidden;
   -moz-transition: all 0.5s;
@@ -565,11 +535,11 @@ header a {
   /* Opera */
   transition: all 0.5s;
   -webkit-border-radius: 5px;
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
   -moz-border-radius: 5px;
   border-radius: 5px;
-  border-radius: 5px;
+  -webkit-box-shadow: 0px 0px 15px rgba(50, 50, 50, 0.5);
+  -moz-box-shadow: 0px 0px 15px rgba(50, 50, 50, 0.5);
+  box-shadow: 0px 0px 15px rgba(50, 50, 50, 0.5);
 }
 
 .imagebox:hover {
@@ -591,7 +561,7 @@ header a {
 }
 
 .landscape {
-  height: 100%;
+  width: 100%;
 }
 
 .portrait {
@@ -631,6 +601,7 @@ footer p {
 @media (max-width: 1620px) {
   .about-msg {
     width: 67%;
+    padding: 25px 0 0 5%;
   }
 
   .about-msg h3 {
@@ -670,21 +641,11 @@ footer p {
     padding: 3%;
   }
 
-  .imagebox {
-    width: 19%;
-    padding-bottom: 19%;
+  .image-container {
+    width: 28%;
     margin: 0 0 1% 1%;
     float: left;
-    position: relative;
-    overflow: hidden;
-  }
-
-  .image-title h3 {
-    font-size: 1.8em;
-  }
-
-  .image-description p, .image-description ul {
-    font-size: 1.2em;
+    padding: 2%;
   }
 }
 @media (max-width: 1200px) {
@@ -785,36 +746,21 @@ footer p {
     top: 20%;
   }
 
-  .work-box {
-    width: 92%;
+  .image-container {
+    width: 40%;
+    margin: 0 0 1% 1%;
     float: left;
-    height: auto;
-    overflow: hidden;
     padding: 4%;
-    margin-bottom: 1%;
   }
 
   .imagebox {
-    width: 24%;
+    width: 100%;
     padding-bottom: 25%;
-    margin: 0 0 1% 1%;
-  }
-
-  .image-title h3 {
-    font-size: 1.4em;
-  }
-
-  .image-description p, .image-description ul {
-    font-size: 0.8em;
   }
 }
 @media (max-width: 720px) {
   h2 {
     font-size: 1em;
-  }
-
-  h3 {
-    font-size: 1.4em;
   }
 
   p {
@@ -849,45 +795,39 @@ footer p {
     padding: none;
   }
 
-  footer p {
-    font-size: .55em;
+  .image-container {
+    width: 90%;
+    margin: 0 0 5% 0;
+    float: left;
+    padding: 4%;
   }
 
   .imagebox {
-    width: 49%;
-    padding-bottom: 49%;
-    margin: 0 0 1% 1%;
+    float: left;
+    width: 100%;
+    padding-bottom: 25%;
+    margin: 4% 0 0 0;
+    border-radius: 0px;
   }
 
-  .image-description p, .image-description ul {
-    font-size: 0.8em;
+  .image-description {
+    width: 100%;
+    float: left;
+    margin: 4% 0 0 0;
+  }
+
+  .landscape {
+    width: 100%;
+    height: auto;
+  }
+
+  footer p {
+    font-size: .55em;
   }
 }
 @media (max-width: 420px) {
   .content-box p {
     font-size: 1em;
-  }
-
-  .work-box {
-    margin: 0 0 20px 0;
-  }
-
-  .image-title {
-    width: 100%;
-    margin: 0 0 2% 0;
-  }
-
-  .image-title h3 {
-    font-size: 1em;
-  }
-
-  .image-image {
-    width: 100%;
-    margin: 0 0 2% 0;
-  }
-
-  .image-description {
-    width: 100%;
   }
 }
 @media (max-width: 320px) {

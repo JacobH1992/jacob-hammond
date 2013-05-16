@@ -1,25 +1,36 @@
-  .imagebox-wrapper
+#imagebox-wrapper
+{
+  width: 100%;
+  overflow: hidden;
+  height: auto;
+}
+
+  .image-container
   {
-    width: 100%;
-    overflow: auto;
-    @include hover-fade-normal;
+    float: left;
+    height: auto;
+    overflow: hidden;
+    width: 19%;
+    margin: 0 0 1% 1%;
+    padding: 2%;
   }
 
-  .imagebox-position
+  .imagebox-container-position
   {
     margin-left: -1%;
   }
 
   .imagebox
   {
-    width: 15.666%;
-    padding-bottom: 15.666%;
-    margin: 0 0 1% 1%;
     float: left;
+    width: 100%;
+    padding-bottom: 35%;
+    margin: 4% 0 0 0;
     position: relative;
     overflow: hidden;
     @include hover-fade-normal;
     @include border-radius-full;
+    @include image-shadow;
   }
 
   .imagebox:hover
@@ -38,9 +49,9 @@
      zoom: 1;
     }
 
-  .landscape  
+ .landscape  
   {
-    height: 100%;
+    width: 100%;
   }
 
   .portrait

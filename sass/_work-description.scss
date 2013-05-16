@@ -35,68 +35,35 @@
 
 /*WORK NAV END*/
 
-
-#detail-view
-{
-  display: block;
-}
-
-  .work-box
-  {
-    width: 92%;
-    float: left;
-    @include height-fix;
-    padding:4%;
-    margin-bottom: 2%;
-  }
-
-    .image-image, .image-title
-    {
-      float:left;
-    }
-
     .image-title
     {
+      float:left;
       width: 100%;
-      @include text-shadow;
     }
 
       .image-title h3
       {
-        font-size: 3em;
-        color: #000;
+        color: #FFF;
         text-transform: uppercase;
-        margin: 0 0 2% 0;
+        @include text-shadow;
       }
 
     .image-description
     {
-      width:48%;
-      float: right;
+      width:100%;
+      float: left;
+      margin: 4% 0 0 0;
     }
 
-    .image-image 
+    .image-description p
     {
-      width: 48%;
-      height: auto;
-      max-height: 650px;
-      overflow: hidden;
+      float: left;
     }
-
-      .image-image img
-      {
-        width: 100%;
-        height: auto;
-        overflow: hidden;
-/*        @include image-shadow;*/
-        @include border-radius-full;
-      }
 
       .image-description p, .image-description ul
       {
-        font-size: 1.5em;
-        color: #000;
-        font-weight: 400;
+        font-size: 1em;
+        color: #FFF;
         @include text-shadow;
       }
 
@@ -114,5 +81,6 @@
         color: white;
         background: #666;
         padding: 5px;
+        margin: 2px;
         @include text-shadow-none;
       }
