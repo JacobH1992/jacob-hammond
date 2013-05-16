@@ -29,5 +29,11 @@ $('#back').click(function(){
 	
 });
 
+  $(document).ready(function(){
+
+    $(".top-msg").hide();
+
+  });
+
  
 
